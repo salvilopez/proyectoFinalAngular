@@ -9,8 +9,17 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
 import { ExpertosPageComponent } from './pages/expertos-page/expertos-page.component';
 import { EtiquetasPageComponent } from './pages/etiquetas-page/etiquetas-page.component';
 import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,12 +28,23 @@ import { RegisterComponent } from './components/register/register.component';
     ExpertosPageComponent,
     EtiquetasPageComponent,
     LoginComponent,
-    RegisterComponent
+    NotFoundPageComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSnackBarModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatInputModule,
+    MatIconModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
