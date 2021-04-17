@@ -1,24 +1,63 @@
 <main>
-    <div id="login">
-        <div>
-            <h1>Login Page :</h1>
-            <!--<h4 class="text-center">{{ loginForm.value | json }}</h4>-->
-        </div>
-        <form [formGroup]="loginForm" (submit)="login()">
-            <mat-form-field appearance="legacy">
-                <input matInput formControlName="email" required/>
-                <mat-icon matSuffix>account_box</mat-icon>
-                <mat-hint>Email</mat-hint>
-            </mat-form-field>
-            <mat-form-field appearance="legacy">
-                <input matInput formControlName="password" required/>
-                <mat-icon matSuffix>lock</mat-icon>
-                <mat-hint>Password</mat-hint>
-            </mat-form-field>
-            <div>
-                <button mat-raised-button color="accent" type="submit">Login</button>
-                <button mat-raised-button color="warning" [routerLink]="['/registro']"> Go To Register Page</button>
+    <div class="body">
+        <div class="container-login">
+            <div class="example-card">
+                <div class="container-bienvenido">
+                    <div>
+                        <p class="text-bienvenidos">Bienvenido/a</p>
+                        <span class="text-inicia-sesion">Inicia sesión para continuar</span>
+                    </div>
+
+                    <form [formGroup]="loginForm" (submit)="login()" class="card-login-content">
+                        <div class="inputs-container">
+                            <div class="input-container-username">
+                                <div class="text-email">
+                                    <span>Email</span>
+                                </div>
+                                <input class="input-username" formControlName="email" />
+
+                            </div>
+
+                            <div class="password-container">
+                                <div class="input-container-password">
+                                    <div class="text-password">
+                                        <span>Password</span>
+                                    </div>
+                                    <input class="input-password" formControlName="password" />
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-container-inicio-sesion">
+                            <div>
+                                <div class="text-nuevo-usuario">
+                                    Nuevo usuario? Crear Cuenta
+                                    <button class="btn-inicio-sesion">
+                  <div>Inicio sesión</div>
+                </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </form>
+        </div>
+    </div>
+
+    <div class="container-info">
+        <div class="container-info-text">
+            <p class="text-plataform">La plataforma de gestión de expertos</p>
+            <p class="text-lorem">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun.
+            </p>
+        </div>
+
+        <button class="btn-base-web">
+    <div class="decorator-btn">
+      <div class="text-decorator-btn">
+        <p>ir a la web</p>
+      </div>
+    </div>
+  </button>
     </div>
 </main>

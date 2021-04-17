@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
                 verticalPosition: 'top',
               }
             );
-            sessionStorage.setItem('Token',"Bearer "+response.jwt);
+            sessionStorage.setItem('Token',"Jwt =  "+response.jwt);
             localStorage.setItem('username', user.email);
             this.authService.setLoggedIn(true);
             this.router.navigate(['/expertos']);
