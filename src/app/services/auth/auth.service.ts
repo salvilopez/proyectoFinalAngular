@@ -17,9 +17,11 @@ export class AuthService {
    */
   login(user: UserRequest): Observable<any> {
     let body = {
-      email: user.email,
-      password: user.password,
-    };
+      //email: user.email,
+     // password: user.password,
+     email: 'salvi@gmail.com',
+      password: 'salvi'
+     };
 
     return this.http.post('http://localhost:8082/auth/login', body);
   }
