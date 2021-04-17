@@ -29,8 +29,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { ExpertsTableComponent } from './components/experts-table/experts-table.component';
-import { TagsTableComponent } from './components/tags-table/tags-table.component';
+
 
 
 
@@ -48,8 +47,6 @@ import { TagsTableComponent } from './components/tags-table/tags-table.component
     TagsPageComponent,
     ExpertsPageComponent,
     NavbarComponent,
-    ExpertsTableComponent,
-    TagsTableComponent,
 
 
 
