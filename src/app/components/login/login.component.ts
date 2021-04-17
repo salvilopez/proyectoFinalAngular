@@ -38,18 +38,19 @@ export class LoginComponent implements OnInit {
       );
       this.authSubscription = this.authService.login(user).subscribe(
         (response:UserResponse) => {
-          if (response.token) {
+          console.log(response)
+          if (response.jwt) {
             this.snackBar.open(
               'Login realizado con exito',
-              `Token: ${response.token}`,
+              `Token: ${response.jwt}`,
               {
                 duration: 2000,
                 horizontalPosition: 'center',
                 verticalPosition: 'top',
               }
             );
-            sessionStorage.setItem('Token', response.token);
-            localStorage.setItem('username', user.username);
+            sessionStorage.setItem('Token',"Bearer "+response.jwt);
+            localStorage.setItem('username', user.email);
             this.authService.setLoggedIn(true);
             this.router.navigate(['/expertos']);
           }

@@ -17,12 +17,11 @@ export class AuthService {
    */
   login(user: UserRequest): Observable<any> {
     let body = {
-      username: user.username,
+      email: user.email,
       password: user.password,
     };
-    //body.email = 'eve.holt@reqres.in';
-    //body.password = 'cityslicka';
-    return this.http.post('https://finalprojectssl.herokuapp.com/api/auth', body);
+
+    return this.http.post('http://localhost:8082/auth/login', body);
   }
 
   /**
@@ -46,12 +45,12 @@ export class AuthService {
    */
   register(user: UserRequest): Observable<any> {
     let body = {
-      username: user.username,
+      email: user.email,
       password: user.password,
     };
     console.table(body);
     //body.email = 'eve.holt@reqres.in';
     //body.password = 'pistol';
-    return this.http.post('https://finalprojectssl.herokuapp.com/api/auth', body);
+    return this.http.post('http://localhost:8082/auth/registro', body);
   }
 }

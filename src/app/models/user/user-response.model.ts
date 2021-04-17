@@ -1,8 +1,8 @@
 export class UserResponse {
-  token: string;
+  jwt: string;
 
 
-  constructor(token: string){
-    this.token = token;
+  constructor(jwt: string){
+    this.jwt = jwt;
   }
 }

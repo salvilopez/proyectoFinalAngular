@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExpertosPageComponent } from './expertos-page.component';
+import { TagsPageComponent } from './tags-page.component';
 
-describe('ExpertosPageComponent', () => {
-  let component: ExpertosPageComponent;
-  let fixture: ComponentFixture<ExpertosPageComponent>;
+describe('TagsPageComponent', () => {
+  let component: TagsPageComponent;
+  let fixture: ComponentFixture<TagsPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExpertosPageComponent ]
+      declarations: [ TagsPageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ExpertosPageComponent);
+    fixture = TestBed.createComponent(TagsPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
