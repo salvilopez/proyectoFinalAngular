@@ -10,7 +10,7 @@ export class ExpertsPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log( sessionStorage.getItem("Token"));
+    console.log( );
   }
 
 }

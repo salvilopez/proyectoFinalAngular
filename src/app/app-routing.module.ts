@@ -23,16 +23,19 @@ const routes: Routes = [  {
 {
   path: 'expertos', // http:localhost:4200/todos
   component: ExpertsPageComponent,
+  outlet:'routerNavBar',
   canActivate: [GuardGuard],
 },
+
 {
   path: 'etiquetas', // http:localhost:4200/todos/1
   component: TagsPageComponent,
+  outlet:'routerNavBar',
   canActivate: [GuardGuard],
 },
 {
   path: '**',
-  component: NotFoundPageComponent
+  component: NotFoundPageComponent,
 }];
 
 @NgModule({

@@ -1,3 +1,9 @@
 <div class="content" role="main">
-    <router-outlet></router-outlet>
+
+    <div *ngIf="!this.logueado">
+        <router-outlet></router-outlet>
+    </div>
+    <div *ngIf="this.logueado">
+        <app-navbar></app-navbar>
+    </div>
 </div>

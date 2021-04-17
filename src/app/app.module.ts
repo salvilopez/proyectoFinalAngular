@@ -18,8 +18,22 @@ import { ExpertsListComponent } from './views/experts-list/experts-list.componen
 import { TagsPageComponent } from './pages/tags-page/tags-page.component';
 import { ExpertsPageComponent } from './pages/experts-page/experts-page.component';
 
-import { SideNavComponent } from './components/side-nav/side-nav.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
+
+import {NavbarComponent}from 'src/app/components/navbar/navbar.component'
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { ExpertsTableComponent } from './components/experts-table/experts-table.component';
+import { TagsTableComponent } from './components/tags-table/tags-table.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -33,7 +47,11 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     ExpertsListComponent,
     TagsPageComponent,
     ExpertsPageComponent,
-    SideNavComponent
+    NavbarComponent,
+    ExpertsTableComponent,
+    TagsTableComponent,
+
+
 
 
   ],
@@ -45,7 +63,15 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
     MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
 
 
   ],
