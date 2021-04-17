@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs/internal/Subscription';
 import { Expert } from 'src/app/models/expert/expert.model';
@@ -10,8 +10,9 @@ import {ExpertsService} from 'src/app/services//experts/experts.service'
 })
 export class ExpertsListComponent implements OnInit {
 
-  expertList:Expert[]=[]
+expertList:Expert[]=[]
   expertSubscription: Subscription = new Subscription();
+  expertResponse:any={}
   constructor(private expertsService:ExpertsService,  private snackBar: MatSnackBar,) {
 
 
@@ -22,7 +23,7 @@ export class ExpertsListComponent implements OnInit {
     this.getExperts();
   }
 getExperts(){
-  this.expertSubscription=this.expertsService.getAllExperts().subscribe((response)=>{
+  this.expertSubscription=this.expertsService.getAllExperts(this.expertResponse).subscribe((response)=>{
     this.expertList=response;
     console.log(this.expertList)
   },(err)=>{
